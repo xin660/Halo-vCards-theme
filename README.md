@@ -44,13 +44,9 @@
 <br>
 
 ### 🌈 安装 
- 主题仓库地址 `https://github.com/dhjddcn/halo-theme-vCards.git`
+ 主题仓库地址 `https://github.com/iRoZhi/Halo-vCards-theme.git`
 <br>
 
-### 🌈 初始化建议
-
-左侧菜单栏自定义
-<br>
 
 ### ⭐️ 主题功能
 - [x] 归档页面
