@@ -11,6 +11,7 @@ Basic:
       name: author_describe
       label: 博主一言
       type: text
+      default: '愿世界安康，愿你我皆好！'
       description: "展示在博主昵称下面"
     preloader:
       name: preloader
@@ -118,6 +119,12 @@ style:
       label: 文本颜色
       type: color
       default: '#3B4B5E'
+    DIYfonts:
+      name: DIYfonts
+      label: 自定义字体
+      type: textarea
+      default: '/themes/0vcards/source/fonts/OPPO-OS.woff2' 
+      placeholder: '输入你的自定义字体链接' 
     custom:
       name: custom
       label: 自定义样式

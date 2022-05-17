@@ -16,7 +16,7 @@
         <#if post.thumbnail?? && post.thumbnail!=''>
             <img class="header-post-news-item-image lazyload" data-src="${post.thumbnail!''}" src="${post.thumbnail!''}" alt="${post.title}" />
         <#else>
-            <img class="header-post-news-item-image lazyload" data-src="${post.thumbnail!''}" src="${theme_base!}/source/images/sj/${randomMethod(1,10)}.jpg" alt="${post.title}" />
+            <img class="header-post-news-item-image lazyload" data-src="${post.thumbnail!''}" src="${theme_base!}/source/images/sj/${randomMethod(1,10)}.webp" alt="${post.title}" />
         </#if>
     </div>
 </header>

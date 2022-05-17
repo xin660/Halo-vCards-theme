@@ -29,6 +29,14 @@
 		--aide: ${settings.aidecolor!'#FF965D'};
 		--text: ${settings.textcolor!'#3B4B5E'};
 		}
+		@font-face {
+			font-family:DIYfonts;font-style: normal;font-display: swap;
+			src: url('${settings.DIYfonts!}') format('truetype')
+		}
+		*{
+			font-family:DIYfonts,'Noto Serif SC', serif !important;
+		}
+
 
 		${settings.custom!}
 	</style>

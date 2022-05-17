@@ -45,16 +45,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: OPPO_OS;
-  font-style: normal;
-  font-display: swap;
-  src: url('../fonts/OPPO-OS.woff2') format('woff2');
-}
-
-* {
-  font-family: OPPO_OS;
-}
 
 ::-webkit-scrollbar {
   width: 0;
