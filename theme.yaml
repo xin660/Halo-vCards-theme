@@ -1,0 +1,11 @@
+id: vCards
+name: vCards
+author:
+  name: irils
+  website: https://www.rz.sb
+description: A other Halo theme
+logo: /themes/0vcards/source/images/themelogo.png
+website: https://github.com/vCards-Theme/Halo-theme-vCards
+repo: https://github.com/vCards-Theme/Halo-theme-vCards
+version: 1.0.0
+require: 1.4.2

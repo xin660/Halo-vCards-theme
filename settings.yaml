@@ -1,0 +1,125 @@
+Basic:
+  label: 基本设置
+  items:
+    bannerUrl:
+      name: bannerUrl
+      label: 博客头图
+      type: attachment
+      default: /themes/0vcards/source/images/banner.jpg
+      description: "用于展示头图"
+    author_describe:
+      name: author_describe
+      label: 博主一言
+      type: text
+      description: "展示在博主昵称下面"
+    preloader:
+      name: preloader
+      label: 是否开启页面预加载
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    ScrollIndicator:
+      name: ScrollIndicator
+      label: 是否开启顶部滚动进度条
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    photos:
+      name: photos
+      label: 相册排列方式
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 并排
+        - value: false
+          label: 瀑布流
+    links_random:
+      name: links_random
+      label: 是否开启友链随机排序
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+Sns:
+  label: 社交资料
+  items:
+    rss:
+      name: rss
+      label: RSS
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    qq:
+      name: qq
+      label: QQ
+      type: text
+      placeholder: '只需填入 QQ 号即可'
+    weibo:
+      name: weibo
+      label: 微博
+      type: text
+      placeholder: '只需填入微博 Id 即可'
+    email:
+      name: email
+      label: Email
+      type: text
+      placeholder: '只需填入邮箱地址即可'
+    github:
+      name: github
+      label: Github
+      type: text
+      placeholder: '只需填入 Github 用户名即可'
+    telegram:
+      name: telegram
+      label: Telegram
+      type: text
+      placeholder: '只需填入 Telegram Id 即可'
+    bilibili:
+      name: bilibili
+      label: Bilibili
+      type: text
+      placeholder: '请输入你的bilibli用户主页链接'
+style:
+  label: 样式设置
+  items:
+    indexcolor:
+      name: indexcolor
+      label: 主题主色
+      type: color
+      default: '#3086FF'
+    aidecolor:
+      name: aidecolor
+      label: 主题辅助色
+      type: color
+      default: '#FF965D'
+    textcolor:
+      name: textcolor
+      label: 文本颜色
+      type: color
+      default: '#3B4B5E'
+    custom:
+      name: custom
+      label: 自定义样式
+      type: textarea
+      placeholder: '不需要 <style></style> 标签' 
