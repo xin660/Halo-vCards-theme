@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta name="robots" content="noindex,nofllow"/>
-    <title>测试私密文章访问 - ${blog_title!}</title>
+    <title>私密文章访问 - ${blog_title!}</title>
     <style>
         body {
             background-color: #080821;
@@ -162,7 +162,7 @@
         </div>
         <div style="margin-top: 8px;color: red;">${errorMsg!}</div>
         <div class="submit-input">
-            <button type="submit">验证1111111111</button>
+            <button type="submit">验证</button>
         </div>
     </form>
 </div>

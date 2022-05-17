@@ -42,9 +42,12 @@
                 class="font-icon ri-wechat-fill ri-xl"></i><span>wechat</span></a>
     </footer>
     
-    <h2 class="title title--h3">Comments</h2>
-    <#include "module/comment.ftl">
-    <@comment post=post type="post" />
+
+    <#if !post.disallowComment!false>
+        <h2 class="title title--h3">Comments</h2>
+        <#include "module/comment.ftl">
+        <@comment post=post type="post" />
+    </#if>
 </div>
 
 </@layout>

@@ -16,12 +16,17 @@
         公共 head 代码，详情请参考：https://docs.halo.run/zh/developer-guide/theme/public-template-tag
         包含：Favicon，自定义 head 等
     -->
+    <title>${title}</title>
 
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="${theme_base!}/source/css/style.css" />
     <@global.head />
 
-    <title>${title}</title>
+	<#if is_post?? || is_sheet??>
+        <link rel="preload stylesheet" as="style" href="${theme_base!}/source/plugins/prism/prism.min.css">
+        <link href="${theme_base!}/source/plugins/prism/themes/prism-${settings.code_theme!}.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="${theme_base!}/source/plugins/prism/prism.min.js"></script>
+    </#if>
 
 	<style>
 		:root {
@@ -133,7 +138,10 @@
 
 					<!-- Footer -->
 					<footer class="footer">
-					Powered by <a href="https://halo.run/" target="_blank" rel="noopener noreferrer">Halo</a> | Theme by <a href="https://halo.run/" target="_blank" rel="noopener noreferrer">vCards</a> © 2022 Copyright</footer>
+					<@global.footer />
+					Powered by <a href="https://halo.run/" target="_blank" rel="noopener noreferrer">Halo</a> | Theme by <a href="https://halo.run/" target="_blank" rel="noopener noreferrer">vCards</a> © 2022 Copyright
+					<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">${settings.icp}</a>
+					</footer>
 				</div>
 			</div>
 		</div>
@@ -164,14 +172,9 @@
         $(".nav li a").eq(0).addClass('active');
     }
 
-	
 
 	</script>
-<#--
-    公共底部代码，详情请参考：https://docs.halo.run/zh/developer-guide/theme/public-template-tag
-    包含：统计代码，底部信息
--->
-<@global.footer />
+
 </body>
 </html>
 </#macro>

@@ -57,6 +57,93 @@ Basic:
           label: 开启
         - value: false
           label: 关闭
+    code_theme:
+      name: code_theme
+      label: 文章高亮代码主题
+      type: select
+      data-type: string
+      default: "one-dark"
+      description: "设置代码块主题，可通过后台元数据为每篇文章设置单独的代码主题，主题来自 prism-themes，见https://github.com/PrismJS/prism-themes"
+      options:
+        - value: "one-dark"
+          label: "one-dark"
+        - value: "one-light"
+          label: "one-light"
+        - value: "a11y-dark"
+          label: "a11y-dark"
+        - value: "atom-dark"
+          label: "atom-dark"
+        - value: "base16-ateliersulphurpool.light"
+          label: "base16-ateliersulphurpool.light"
+        - value: "cb"
+          label: "cb"
+        - value: "coldark-cold"
+          label: "coldark-cold"
+        - value: "coldark-dark"
+          label: "coldark-dark"
+        - value: "coy-without-shadows"
+          label: "coy-without-shadows"
+        - value: "darcula"
+          label: "darcula"
+        - value: "dracula"
+          label: "dracula"
+        - value: "duotone-dark"
+          label: "duotone-dark"
+        - value: "duotone-earth"
+          label: "duotone-earth"
+        - value: "duotone-forest"
+          label: "duotone-forest"
+        - value: "duotone-light"
+          label: "duotone-light"
+        - value: "duotone-sea"
+          label: "duotone-sea"
+        - value: "duotone-space"
+          label: "duotone-space"
+        - value: "ghcolors"
+          label: "ghcolors"
+        - value: "gruvbox-dark"
+          label: "gruvbox-dark"
+        - value: "gruvbox-light"
+          label: "gruvbox-light"
+        - value: "holi-theme"
+          label: "holi-theme"
+        - value: "hopscotch"
+          label: "hopscotch"
+        - value: "lucario"
+          label: "lucario"
+        - value: "material-dark"
+          label: "material-dark"
+        - value: "material-light"
+          label: "material-light"
+        - value: "material-oceanic"
+          label: "material-oceanic"
+        - value: "night-owl"
+          label: "night-owl"
+        - value: "nord"
+          label: "nord"
+        - value: "pojoaque"
+          label: "pojoaque"
+        - value: "shades-of-purple"
+          label: "shades-of-purple"
+        - value: "solarized-dark-atom"
+          label: "solarized-dark-atom"
+        - value: "synthwave84"
+          label: "synthwave84"
+        - value: "vs"
+          label: "vs"
+        - value: "vsc-dark-plus"
+          label: "vsc-dark-plus"
+        - value: "xonokai"
+          label: "xonokai"
+        - value: "z-touch"
+          label: "z-touch"
+    icp:
+      name: icp
+      label: ICP 备案号
+      type: text
+      default: ""
+      placeholder: "请填写 ICP 备案号信息"
+      description: "ICP 备案信息将展示在页脚中，不填不展示（示例：滇ICP备xx号）"
 Sns:
   label: 社交资料
   items:
@@ -122,7 +209,7 @@ style:
     DIYfonts:
       name: DIYfonts
       label: 自定义字体
-      type: textarea
+      type: text
       default: '/themes/0vcards/source/fonts/OPPO-OS.woff2' 
       placeholder: '输入你的自定义字体链接' 
     custom:
