@@ -10,3 +10,4 @@ repo: https://github.com/vCards-Theme/Halo-theme-vCards
 version: 1.0.3
 require: 1.4.2
 branch: main
+updateStrategy: RELEASE
