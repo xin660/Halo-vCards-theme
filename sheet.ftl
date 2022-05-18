@@ -9,13 +9,10 @@
         <article class="post-formatContent">
             ${sheet.formatContent!}
         </article>
-
-
         <#if !post.disallowComment!false>
-        <h2 class="title title--h3">Comments</h2>
-        <#include "module/comment.ftl">
-        <@comment post=sheet type="sheet" />
-        
-    </#if>
+            <h2 class="title title--h3">Comments</h2>
+            <#include "module/comment.ftl">
+            <@comment post=sheet type="sheet" />
+        </#if>
     </div>
 </@layout>

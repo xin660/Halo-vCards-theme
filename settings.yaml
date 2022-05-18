@@ -57,6 +57,22 @@ Basic:
           label: 开启
         - value: false
           label: 关闭
+    pjax:
+      name: pjax
+      label: 是否开启pjax
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    pjaxcomplete:
+      name: pjaxcomplete
+      label: pjax回调
+      type: textarea
+      placeholder: "请填写pjax回调代码"
     code_theme:
       name: code_theme
       label: 文章高亮代码主题

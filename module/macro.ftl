@@ -19,14 +19,15 @@
     <title>${title}</title>
 
 	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="${theme_base!}/source/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="${theme_base!}/source/css/style.css?v=${theme.version!}" />
+	<link rel="stylesheet" type="text/css" href="${theme_base!}/source/css/nprogress.css?v=${theme.version!}" />
     <@global.head />
 
-	<#if is_post?? || is_sheet??>
-        <link rel="preload stylesheet" as="style" href="${theme_base!}/source/plugins/prism/prism.min.css">
-        <link href="${theme_base!}/source/plugins/prism/themes/prism-${settings.code_theme!}.css" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="${theme_base!}/source/plugins/prism/prism.min.js"></script>
-    </#if>
+
+	<link rel="preload stylesheet" as="style" href="${theme_base!}/source/plugins/prism/prism.min.css?v=${theme.version!}">
+	<link href="${theme_base!}/source/plugins/prism/themes/prism-${settings.code_theme!}.css?v=${theme.version!}" type="text/css" rel="stylesheet" />
+	<script data-pjax type="text/javascript" src="${theme_base!}/source/plugins/prism/prism.min.js?v=${theme.version!}"></script>
+
 
 	<style>
 		:root {
@@ -132,7 +133,7 @@
 				<#include "menu.ftl">
 
 				<!-- Content -->
-				<div class="col-12 col-md-12 col-lg-10">
+				<div class="col-12 col-md-12 col-lg-10" id="pjax">
 					
 					<#nested >
 
@@ -151,28 +152,29 @@
 
 
 
-<!-- JavaScripts -->
-	<script src="${theme_base!}/source/js/jquery-3.4.1.min.js"></script>
-	<script src="${theme_base!}/source/js/plugins.min.js"></script>
-	<script src="${theme_base!}/source/js/common.js"></script>
-
+	<!-- JavaScripts -->
+	<script src="${theme_base!}/source/js/jquery-3.4.1.min.js?v=${theme.version!}"></script>
+	<script src="${theme_base!}/source/js/plugins.min.js?v=${theme.version!}"></script>
+	<script src="${theme_base!}/source/js/index.js?v=${theme.version!}"></script>
+	<script type="text/javascript" src="${theme_base!}/source/js/pjax.min.js?v=${theme.version!}"></script>
+	<script type="text/javascript" src="${theme_base!}/source/js/nprogress.js?v=${theme.version!}"></script>
 
 	<script type="text/javascript">
-    var url = location.href;
-    var urlstatus = false;
-    $(".nav li a").each(function () {
-        if ((url + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '/') {
-            $(this).addClass('active');
-            urlstatus = true;
-        } else {
-            $(this).removeClass('active');
-        }
-    });
-    if (!urlstatus) {
-        $(".nav li a").eq(0).addClass('active');
-    }
-
-
+	<#if settings.pjax!false>
+		const pjax = new Pjax({
+			selectors: [
+				'#pjax', 'title'
+			],
+		});
+		document.addEventListener('pjax:send', () => {
+			NProgress.start();//加载动画效果开始
+		});
+		document.addEventListener('pjax:complete', () => {
+			NProgress.done();//加载动画效果结束
+			PjaxLoad();
+			${settings.pjaxcomplete!}
+		});
+	</#if>
 	</script>
 
 </body>
